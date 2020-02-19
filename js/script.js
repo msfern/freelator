@@ -11,15 +11,26 @@ function calculateRate(hours, days, vacations, total) {
   return total / (days * 4 * hours) + vacations * days * hours;
 }
 
+function isEveryFieldFilled() {
+  return (
+    hoursInput.value.length &&
+    daysInput.value.length &&
+    vacationInput.value.length &&
+    totalInput.value.length
+  );
+}
+
 button.addEventListener('click', e => {
   e.preventDefault();
-  const rate = calculateRate(
-    hoursInput.value,
-    daysInput.value,
-    vacationInput.value,
-    totalInput.value
-  );
-  totalOutput.textContent = `$${rate.toFixed(2)}`;
-  resultArea.classList.add('show');
-  mainArea.classList.add('has-result');
+  if (isEveryFieldFilled()) {
+    const rate = calculateRate(
+      hoursInput.value,
+      daysInput.value,
+      vacationInput.value,
+      totalInput.value
+    );
+    totalOutput.textContent = `$${rate.toFixed(2)}`;
+    resultArea.classList.add('show');
+    mainArea.classList.add('has-result');
+  }
 });

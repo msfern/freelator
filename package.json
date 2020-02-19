@@ -1,0 +1,19 @@
+{
+  "name": "freela-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss ./css/build/style.scss ./css/dist/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "keywords": [],
+  "author": "Stephanie Fernandes <steph3001@gmail.com> (https://msfern.netlify.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "sass": "^1.25.0"
+  }
+}

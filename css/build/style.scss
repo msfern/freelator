@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+$black: #212121;
+$white: #F6F6F6;
+$purple: #A24CE5;
+$gray: #939393;
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  background-color: $white;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+.header {
+  font-size: 5rem;
+  font-weight: 700;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+
+  span {
+    color: $purple;
+  }
+}
+
+.description {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 45px 0;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  transition: left .5s ease-in;
+
+  &.has-result {
+    left: 40%;
+  }
+}
+
+.calculator-area {
+  max-width: 450px;
+  width: 100%;
+  background-color: $black;
+  color: $white;
+  padding: 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+
+  .input-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+
+    input {
+      position: relative;
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid $gray;
+      color: $white;
+      padding: 10px 0 5px;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 1.2rem;
+    background-color: $purple;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 30px;
+    display: block;
+    margin: 45px auto 0;
+  }
+}
+
+.result-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  background-color: $purple;
+  height: 100%;
+  border-radius: 0 8px 8px 0;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: left .5s ease-in;
+  
+  &.show {
+    left: 440px;
+  }
+
+  .title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: $white;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .rate {
+    margin: auto;
+    font-weight: 700;
+    font-size: 4.5rem;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    color: $black;
+  }
+
+  .nice {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: $white;
+  }
+}

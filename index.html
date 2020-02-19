@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/dist/style.css">
+  <title>Freelator - Another Freelance Calculator</title>
+</head>
+
+<body>
+  <div class="main">
+    <section class="calculator-area">
+      <h1 class="header"><span>Freela</span>tor</h1>
+      <p class="description">First of all, we need some info regarding your freelance gig.</p>
+      <form>
+        <div class="input-item">
+          <label for="hours">How many hours are you working per day?</label>
+          <input id="hours" type="text" placeholder="Enter here..." />
+        </div>
+        <div class="input-item">
+          <label for="days">How many days per week?</label>
+          <input id="days" type="text" placeholder="Enter here..." />
+        </div>
+        <div class="input-item">
+          <label for="vacation">How many vacation days?</label>
+          <input id="vacation" type="text" placeholder="Enter here..." />
+        </div>
+        <div class="input-item">
+          <label for="project-total">How much did the project cost?</label>
+          <input id="project-total" type="text" placeholder="Enter here..." />
+        </div>
+        <button id='submit-btn' type="submit">Show me the money! </button>
+      </form>
+    </section>
+    <section class="result-area">
+      <h1 class="title">Your rate per hour is</h1>
+      <p id='rate' class="rate"></p>
+      <p class="nice">Nice! 💵</p>
+    </section>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
